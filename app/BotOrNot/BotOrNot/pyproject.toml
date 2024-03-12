@@ -1,0 +1,76 @@
+[tool.briefcase]
+project_name = "Bot or Not"
+bundle = "com.na"
+version = "0.0.1"
+url = "https://example.com/"
+license = "Proprietary"
+author = 'na'
+author_email = "na"
+
+[tool.briefcase.app.BotOrNot]
+formal_name = "Bot or Not"
+description = "explainable AI authorship detection"
+icon = "src/BotOrNot/resources/BotOrNot"
+sources = ['src/BotOrNot']
+requires = [
+    "lime",
+    "scikit-learn",
+    "numpy",
+    "textract"
+]
+
+
+[tool.briefcase.app.BotOrNot.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev38',
+    'std-nslog~=1.0.0'
+]
+
+[tool.briefcase.app.BotOrNot.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev38',
+]
+
+[tool.briefcase.app.BotOrNot.linux.appimage]
+system_requires = [
+    'gir1.2-webkit-3.0',
+    'libcairo2-dev',
+    'libgirepository1.0-dev',
+    'libgtk-3-dev',
+    'libpango1.0-dev',
+    'librsvg2-dev',
+    'libwebkitgtk-3.0-0',
+]
+linuxdeploy_plugins = [
+    'DEPLOY_GTK_VERSION=3 gtk',
+]
+
+[tool.briefcase.app.BotOrNot.linux.flatpak]
+flatpak_runtime = 'org.gnome.Platform'
+flatpak_runtime_version = '42'
+flatpak_sdk = 'org.gnome.Sdk'
+
+[tool.briefcase.app.BotOrNot.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev38',
+]
+
+# Mobile deployments
+[tool.briefcase.app.BotOrNot.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev38',
+    'std-nslog~=1.0.0'
+]
+
+[tool.briefcase.app.BotOrNot.android]
+requires = [
+    'toga-android>=0.3.0.dev38'
+]
+
+[tool.briefcase.app.BotOrNot.web]
+requires = [
+    # Workaround; toga-web 0.3.0.dev38 doesn't include toga-core as a dependency.
+    "toga-core>=0.3.0.dev38",
+    "toga-web>=0.3.0.dev38",
+]
+style_framework = "Bootstrap v4.6"

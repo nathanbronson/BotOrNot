@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Briefcase-Version: 0.3.11
+Name: BotOrNot
+Formal-Name: Bot or Not
+App-ID: com.noneatm.BotOrNot
+Version: 0.0.1
+Home-page: https://example.com/
+Download-URL: https://example.com/
+Author: na
+Author-email: na
+Summary: explainable AI authorship detection

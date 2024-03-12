@@ -1,0 +1,9 @@
+selenium
+webdriver_manager
+tqdm
+scikit-learn
+git+https://github.com/mmabrouk/chatgpt-wrapper
+playwright
+lime
+numpy
+pandas

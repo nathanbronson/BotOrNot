@@ -1,0 +1,6 @@
+lime
+scikit-learn
+numpy
+briefcase
+toga
+textract
